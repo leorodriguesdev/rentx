@@ -10,12 +10,13 @@ import {
     Container,
     Header,
     TotalCars,
-    HeaderContent
+    HeaderContent,
+    CarList,
 } from './styles';
 
 export function Home() {
 
-    const carDataOne = {
+    const carData = {
         brand: 'Fiat',
         name: 'Uno',
         rent: {
@@ -24,15 +25,15 @@ export function Home() {
         },
         thunbnail: 'https://uno.fiat.com.br/content/dam/fiat/products/195/a4z/2/2021/page/profile.png'
     }
-    const carDataTwo = {
-        brand: 'Volkswagen',
-        name: 'Voyage',
-        rent: {
-            period: 'ao dia',
-            price: 150
-        },
-        thunbnail: 'https://importadora.ams3.digitaloceanspaces.com/2018/08/VoyageAutomtico.png'
-    }
+        // const carDataTwo = {
+        //     brand: 'Volkswagen',
+        //     name: 'Voyage',
+        //     rent: {
+        //         period: 'ao dia',
+        //         price: 150
+        //     },
+        //     thunbnail: 'https://importadora.ams3.digitaloceanspaces.com/2018/08/VoyageAutomtico.png'
+        // }
 
    return (
        <Container>
@@ -53,10 +54,11 @@ export function Home() {
             </TotalCars>   
             </HeaderContent>       
             </Header>
-            
-            <Car data={carDataOne}/>
-            <Car data={carDataTwo}/>
-
+            <CarList
+            data={[1,2,3,4,5,6,7,8,9,10,11,12]}
+            keyExtractor={(item) => String(item)}
+            renderItem={({item}) => <Car data={carData}/>} 
+            />
        </Container>
    );
 }
