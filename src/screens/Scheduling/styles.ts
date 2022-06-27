@@ -13,7 +13,7 @@ export const Container = styled.View`
 
 export const Header = styled.View`
     width: 100%;
-    height: 350px;
+    height: 290px;
 
     background-color: ${({ theme }) => theme.colors.header};
 
@@ -25,7 +25,7 @@ export const Header = styled.View`
 export const Title = styled.Text`
     color: ${({ theme }) => theme.colors.shape};
     font-family: ${({ theme }) => theme.fonts.secondary_600};
-    font-size: ${RFValue(34)}px;
+    font-size: ${RFValue(28)}px;
 
     margin-top: 24px;
 `;

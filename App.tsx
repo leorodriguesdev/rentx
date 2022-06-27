@@ -15,8 +15,8 @@ import {
 } from '@expo-google-fonts/archivo'
 
 
-//import { CarDetails } from './src/screens/CarDetails'
-//import { Home } from './src/screens/Home'
+import { CarDetails } from './src/screens/CarDetails'
+import { Home } from './src/screens/Home'
 import { Scheduling } from './src/screens/Scheduling'
 
 import theme from './src/styles/theme'
