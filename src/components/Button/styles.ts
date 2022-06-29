@@ -13,11 +13,11 @@ export const Container = styled(RectButton)<ButtonProps>`
     align-items: center;
     justify-content: center;
 
-    background-color: ${({ color, theme }) => color ? color : theme.colors.main};
+    background-color: ${({ color }) => color };
 `;
 
 export const Title = styled.Text`
     font-family: ${({ theme }) => theme.fonts.primary_500};
     font-size: ${RFValue(15)}px;
-    color: ${({ theme }) => theme.colors.shape};
+    color: ${({ theme }) => theme.colors.shape_light};
 `;

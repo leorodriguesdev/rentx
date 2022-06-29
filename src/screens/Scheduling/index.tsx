@@ -1,10 +1,8 @@
 import React from 'react';
-
+import { useNavigation } from '@react-navigation/native';
 import { useTheme } from 'styled-components';
 import { BackButton } from '../../components/BackButton';
 import ArrowSvg from '../../assets/arrow.svg';
-
-
 
 import {
     Container,
@@ -23,6 +21,11 @@ import { Calendar } from '../../components/Calendar';
 
 export function Scheduling() {
     const theme = useTheme();
+    const navigation = useNavigation();
+
+    function handleConfirmRental() {
+        navigation.navigate('SchedulingDetails')   
+    }
 
    return (
        <Container>
@@ -65,6 +68,7 @@ export function Scheduling() {
             <Footer>
                 <Button
                     title="Confirmar"
+                    onPress={handleConfirmRental}
                 />
             </Footer>
        </Container>
